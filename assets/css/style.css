@@ -14,17 +14,17 @@ header {
 footer {
   background-color: #3a3c4a;
   color: #ffffff;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.15em;
-  padding: 10px 0;
+  padding: 10px 25px;
 }
 
 h2 {
-  font-family: Mali;
+  font-family: "Mali", cursive;
   font-style: normal;
   font-weight: 300;
   font-size: 64px;
@@ -41,7 +41,11 @@ h2:after {
   width: 345px; /* Change this to whatever width you want. */
   padding-top: 20px; /* This creates some space between the element and the border. */
   margin-bottom: 95px;
-  border-bottom: 3px solid #ffd473;
+  border-bottom: 3px solid #ffb50f;
+}
+
+section {
+  padding: 0 25px;
 }
 
 /* Flexbox */
@@ -59,49 +63,6 @@ h2:after {
   justify-content: flex-start;
 }
 
-/* HERO SECTION */
-
-.hero {
-  padding: 200px 25px;
-}
-
-.hero h1 {
-  font-family: Mali;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 62px;
-}
-
-.hero button {
-  width: 255px;
-  height: 57px;
-  background-color: transparent;
-  color: #ffd473;
-  border: 3px solid #ffd473;
-  border-radius: 15px;
-  margin-top: 50px;
-  margin-right: 40px;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 100;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.hero button:hover {
-  background-color: #ffd473;
-  color: #3a3c4a;
-}
-
-.highlight {
-  color: #f9c543;
-}
-
 /* NAVIGATION SECTION */
 
 .main-nav {
@@ -109,6 +70,19 @@ h2:after {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  padding: 0 25px;
+  background-color: rgba(58, 60, 74, 0.98);
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 2px rgba(58, 60, 74, 0.98);
+  box-shadow: 0 2px 2px rgba(58, 60, 74, 0.98);
+  z-index: 9999;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
 }
 
 .main-nav ul {
@@ -137,6 +111,56 @@ h2:after {
 .main-nav li a:hover {
   color: #a1cbe2;
   border-bottom: 2px solid #a1cbe2;
+}
+
+/* HERO SECTION */
+
+.hero {
+  padding: 200px 25px;
+}
+
+.hero h1 {
+  /* font-family: "Mali", cursive; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 62px;
+}
+
+.hero-btn {
+  width: 255px;
+  height: 57px;
+  border: 3px solid #ffd473;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-right: 40px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.hero-btn:hover {
+  background-color: #ffb50f;
+  color: #3a3c4a;
+  border: 3px solid #ffb50f;
+}
+
+.hero-btn-full {
+  background-color: #ffd473;
+  color: #3a3c4a;
+}
+
+.hero-btn-ghost {
+  background-color: transparent;
+  color: #ffd473;
+}
+
+.highlight {
+  color: #f9c543;
 }
 
 /* RESPONSIVE LAYOUT */
