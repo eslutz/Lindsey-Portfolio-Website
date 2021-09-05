@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #3a3c4a;
+  font-family: "Mali", cursive;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: Mali;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 62px;
+}
+
+/* Flexbox */
+
+.flex-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex-container.left-align {
+  justify-content: flex-start;
+}
+
+/* HERO SECTION */
+
+.hero {
+  padding: 200px 25px;
+}
+
+.hero-image {
+  float: right;
+}
+
+.hero-btn {
+  width: 255px;
+  height: 57px;
+  background-color: transparent;
+  color: #ffd473;
+  border: 3px solid #ffd473;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-right: 40px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.hero-btn:hover {
+  background-color: #ffd473;
+  color: #3a3c4a;
+}
+
+.highlight {
+  color: #f9c543;
+}
+
+/* NAVIGATION SECTION */
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  margin: 5px auto;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav li:not(:first-child) {
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 1s;
+  -o-transition: border-bottom 1s;
+  transition: border-bottom 1s, color 1s;
+}
+
+.main-nav li a:active,
+.main-nav li a:hover {
+  color: #a1cbe2;
+  border-bottom: 2px solid #a1cbe2;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 850px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
