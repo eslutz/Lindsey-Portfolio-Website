@@ -11,12 +11,37 @@ header {
   color: #ffffff;
 }
 
-h1 {
+footer {
+  background-color: #3a3c4a;
+  color: #ffffff;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.15em;
+  padding: 10px 0;
+}
+
+h2 {
   font-family: Mali;
   font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 62px;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 83px;
+  letter-spacing: 0.15em;
+  color: #3a3c4a;
+  margin-top: 30px;
+}
+
+h2:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 345px; /* Change this to whatever width you want. */
+  padding-top: 20px; /* This creates some space between the element and the border. */
+  margin-bottom: 95px;
+  border-bottom: 3px solid #ffd473;
 }
 
 /* Flexbox */
@@ -40,11 +65,15 @@ h1 {
   padding: 200px 25px;
 }
 
-.hero-image {
-  float: right;
+.hero h1 {
+  font-family: Mali;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 62px;
 }
 
-.hero-btn {
+.hero button {
   width: 255px;
   height: 57px;
   background-color: transparent;
@@ -64,7 +93,7 @@ h1 {
   transition: background-color 0.5s, color 0.5s;
 }
 
-.hero-btn:hover {
+.hero button:hover {
   background-color: #ffd473;
   color: #3a3c4a;
 }
