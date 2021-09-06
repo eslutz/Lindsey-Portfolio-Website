@@ -36,11 +36,11 @@ h2 {
 }
 
 h2:after {
-  content: ""; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto; /* This will center the border. */
-  width: 345px; /* Change this to whatever width you want. */
-  padding-top: 20px; /* This creates some space between the element and the border. */
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 345px;
+  padding-top: 20px;
   margin-bottom: 95px;
   border-bottom: 3px solid #ffb50f;
 }
@@ -89,10 +89,7 @@ h2:after {
 
 .main-nav li {
   display: inline-block;
-}
-
-.main-nav li:not(:first-child) {
-  margin-left: 40px;
+  margin: 0 20px;
 }
 
 .main-nav li a:link,
@@ -111,6 +108,18 @@ h2:after {
   border-bottom: 2px solid #a1cbe2;
 }
 
+.mobile-nav-icon {
+  float: left;
+  cursor: pointer;
+  color: #ffffff;
+  display: none;
+  transition: color 1s;
+}
+
+.mobile-nav-icon:hover {
+  color: #a1cbe2;
+}
+
 /* HERO SECTION */
 
 .hero {
@@ -119,7 +128,6 @@ h2:after {
 }
 
 .hero h1 {
-  /* font-family: "Mali", cursive; */
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
@@ -139,6 +147,7 @@ h2:after {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
+  cursor: pointer;
   transition: background-color 0.5s, color 0.5s;
 }
 
@@ -165,14 +174,19 @@ h2:after {
 /* WORK EXAMPLES */
 
 .work-exapmles {
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .work-exapmles-image {
   width: 445px;
   margin: 25px;
-  -webkit-box-shadow: 0 2px 2px #efefef;
-  box-shadow: 0 2px 2px #efefef;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.work-exapmles-image:hover {
+  transform: scale(1.05);
 }
 
 /* USER EXPERIENCE VALUES */
@@ -181,10 +195,65 @@ h2:after {
   background-color: #a1cbe2;
 }
 
+.user-experience-values-btn {
+  border: none;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: #fdfdfd;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  margin: 0 60px 95px 60px;
+  color: #3a3c4a;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.user-experience-values-icon {
+  color: #ffd473;
+  font-size: 100px;
+}
+
 /* RESPONSIVE LAYOUT */
+
+@media (max-width: 1334px) {
+  .flex-container.large-break {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 850px) {
   .flex-container {
     flex-direction: column;
+  }
+
+  .mobile-nav-icon {
+    display: inline-block;
+    font-size: 50px;
+    margin-top: 5px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav {
+    float: left;
+    margin-top: 30px;
+    margin-left: 25px;
+  }
+
+  .main-nav li {
+    display: block;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 10px 0;
+    font-size: 100%;
   }
 }
