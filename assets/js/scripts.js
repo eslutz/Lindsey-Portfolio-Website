@@ -1,14 +1,5 @@
-$(document).ready(function () {
-  $(".js--nav-icon").click(function () {
-    let nav = $(".js--main-nav");
-    let icon = $(".js--nav-icon i");
-    nav.slideToggle(200);
-    if (icon.hasClass("ion-navicon-round")) {
-      icon.addClass("ion-close-round");
-      icon.removeClass("ion-navicon-round");
-    } else {
-      icon.addClass("ion-navicon-round");
-      icon.removeClass("ion-close-round");
-    }
-  });
-});
+window.onload = function copyrightWithCurrentYear() {
+  const year = new Date().getFullYear();
+  document.getElementById("copyright").innerHTML = `&copy; ${year}.&nbsp;`;
+  console.log(`current year: ${year}`);
+};
