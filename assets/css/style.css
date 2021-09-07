@@ -87,7 +87,7 @@ footer {
 
 /* NAVIGATION SECTION */
 
-.main-nav {
+.nav-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -107,17 +107,17 @@ footer {
   line-height: 31px;
 }
 
-.main-nav ul {
+#nav_links {
   margin: 5px auto;
 }
 
-.main-nav li {
+.nav-menu a {
   display: inline-block;
   margin: 0 20px;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
+.nav-menu a:link,
+.nav-menu a:visited {
   color: #ffffff;
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -126,21 +126,21 @@ footer {
   transition: border-bottom 1s, color 1s;
 }
 
-.main-nav li a:active,
-.main-nav li a:hover {
+.nav-menu a:active,
+.nav-menu a:hover {
   color: #a1cbe2;
   border-bottom: 2px solid #a1cbe2;
 }
 
-.mobile-nav-icon {
-  float: left;
+#nav_mobile_icon {
   cursor: pointer;
   color: #ffffff;
   display: none;
+  font-size: 43px;
   transition: color 1s;
 }
 
-.mobile-nav-icon:hover {
+#nav_mobile_icon:hover {
   color: #a1cbe2;
 }
 
@@ -252,32 +252,30 @@ footer {
   .flex-container {
     flex-direction: column;
   }
+}
 
-  .mobile-nav-icon {
+/* SWICH TO MOBILE MENU */
+
+@media screen and (max-width: 850px) {
+  /* (A) BREAK INTO VERTICAL MENU */
+  #nav_links a {
+    box-sizing: border-box;
+    display: block;
+    width: fit-content;
+  }
+  /* (B) SHOW HAMBURGER ICON */
+  #nav_mobile_icon {
     display: inline-block;
-    font-size: 50px;
-    margin-top: 5px;
   }
 
-  .main-nav {
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #nav_links {
     display: none;
   }
+}
 
-  .main-nav {
-    float: left;
-    margin-top: 30px;
-    margin-left: 25px;
-  }
-
-  .main-nav li {
+@media screen and (min-width: 851px) {
+  #nav_links {
     display: block;
-  }
-
-  .main-nav li a:link,
-  .main-nav li a:visited {
-    display: block;
-    border: 0;
-    padding: 10px 0;
-    font-size: 100%;
   }
 }
