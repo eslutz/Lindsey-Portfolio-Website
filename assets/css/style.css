@@ -107,11 +107,11 @@ footer {
   line-height: 31px;
 }
 
-#nav_links {
+#nav_mobile_wrapper {
   margin: 5px auto;
 }
 
-.nav-menu a {
+#nav_links a {
   display: inline-block;
   margin: 0 20px;
 }
@@ -252,30 +252,39 @@ footer {
   .flex-container {
     flex-direction: column;
   }
+
+  .main-content {
+    padding-bottom: 78px; /* height of your footer */
+  }
 }
 
 /* SWICH TO MOBILE MENU */
 
 @media screen and (max-width: 850px) {
-  /* (A) BREAK INTO VERTICAL MENU */
+  /* BREAK INTO VERTICAL MENU */
   #nav_links a {
     box-sizing: border-box;
     display: block;
     width: fit-content;
   }
-  /* (B) SHOW HAMBURGER ICON */
+  /* SHOW HAMBURGER ICON */
   #nav_mobile_icon {
     display: inline-block;
+    text-align: center;
   }
 
-  /* (C) TOGGLE SHOW/HIDE MENU */
+  /* TOGGLE SHOW/HIDE MENU */
   #nav_links {
     display: none;
+  }
+
+  #nav_mobile_wrapper {
+    text-align: center;
   }
 }
 
 @media screen and (min-width: 851px) {
   #nav_links {
-    display: block;
+    display: block !important;
   }
 }
