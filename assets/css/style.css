@@ -333,27 +333,29 @@ footer {
     display: block !important;
   }
 }
- /* Teaching */
- .content-flex {
-   display: flex;
- }
+/* Teaching */
+.content-flex {
+  display: flex;
+}
 
- .teaching-heading {
-   display: flex;
-   font-family: "Mali", cursive;
-   color: #3a3c4a;
-   font-size: 28px;
-   padding-top: 70px;
-   padding-bottom: 30px;
- }
+.teaching-heading {
+  display: flex;
+  font-family: "Mali", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #3a3c4a;
+  font-size: 28px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
- .teaching-boxes {
-   display: flex;
-   align-items: center;
-   padding: 20px;
- }
+.teaching-boxes {
+  display: flex;
+  align-items: center;
+  padding: 70px 20px 30px 20px;
+}
 
- .teaching-boxes img {
+.teaching-boxes img {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -368,4 +370,46 @@ footer {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+/* Resume */
+.dark-blue {
+  background-color: #3a3c4a;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  color: #fdfdfd;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.resume-img img {
+  border-radius: 50%;
+  height: 350px;
+  width: 350px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.resume-about {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.resume-about h2 {
+  color: #fdfdfd;
+  text-align: center;
+}
+
+.ed-box,
+.skills-box {
+  justify-content: left;
+  padding: 40px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  min-width: 400px;
 }
