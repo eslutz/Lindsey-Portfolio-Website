@@ -299,6 +299,33 @@ footer {
   .main-content {
     padding-bottom: 78px; /* height of your footer */
   }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 54px;
+  }
+
+  .work-exapmles-image {
+    width: 360px;
+  }
+}
+
+@media (max-width: 414px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 44px;
+    padding-left: 34px;
+  }
+
+  .work-exapmles-image {
+    width: 320px;
+  }
 }
 
 /* SWICH TO MOBILE MENU */
