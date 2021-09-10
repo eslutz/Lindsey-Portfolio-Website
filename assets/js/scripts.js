@@ -13,12 +13,12 @@ function showMenu() {
 }
 
 function makeActive(newActiveSection) {
-  let currentSection = document.getElementById(newActiveSection);
+  let selectedSection = document.getElementById(newActiveSection);
   let workPageSections = document.querySelectorAll(".work-page-information");
 
   workPageSections.forEach((element) => {
-    if (element.id === currentSection.id) {
-      currentSection.classList.add("work-page-active");
+    if (element.id === selectedSection.id) {
+      selectedSection.classList.add("work-page-active");
     } else {
       element.classList.remove("work-page-active");
     }
