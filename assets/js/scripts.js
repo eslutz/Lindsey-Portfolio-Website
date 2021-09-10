@@ -4,7 +4,7 @@ window.onload = function copyrightWithCurrentYear() {
 };
 
 function showMenu() {
-  var x = document.getElementById("nav_links");
+  let x = document.getElementById("nav_links");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -13,34 +13,14 @@ function showMenu() {
 }
 
 function makeActive(newActiveSection) {
-  var currentSection = document.getElementById(newActiveSection);
-  currentSection.classList.add("work-page-active");
+  let currentSection = document.getElementById(newActiveSection);
+  let workPageSections = document.querySelectorAll(".work-page-information");
 
-  var vaDoeSection = document.getElementById("va_doe_section");
-  var lettuceHelpSection = document.getElementById("lettuce_help_section");
-  var movinstSection = document.getElementById("movist_section");
-  var gradCertection = document.getElementById("grad_cert_section");
-
-  switch (newActiveSection) {
-    case "va_doe_section":
-      lettuceHelpSection.classList.remove("work-page-active");
-      movinstSection.classList.remove("work-page-active");
-      gradCertection.classList.remove("work-page-active");
-      break;
-    case "lettuce_help_section":
-      vaDoeSection.classList.remove("work-page-active");
-      movinstSection.classList.remove("work-page-active");
-      gradCertection.classList.remove("work-page-active");
-      break;
-    case "movist_section":
-      lettuceHelpSection.classList.remove("work-page-active");
-      vaDoeSection.classList.remove("work-page-active");
-      gradCertection.classList.remove("work-page-active");
-      break;
-    case "grad_cert_section":
-      lettuceHelpSection.classList.remove("work-page-active");
-      vaDoeSection.classList.remove("work-page-active");
-      movinstSection.classList.remove("work-page-active");
-      break;
-  }
+  workPageSections.forEach((element) => {
+    if (element.id === currentSection.id) {
+      currentSection.classList.add("work-page-active");
+    } else {
+      element.classList.remove("work-page-active");
+    }
+  });
 }
