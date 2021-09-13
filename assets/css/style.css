@@ -51,6 +51,14 @@ h2:after {
   border-bottom: 3px solid #ffb50f;
 }
 
+h3,
+p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+}
+
 /* FLEXBOX */
 
 .flex-container {
@@ -82,7 +90,13 @@ h2:after {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 1920px;
   margin: auto 0;
@@ -288,6 +302,18 @@ footer {
 
 /* RESPONSIVE LAYOUT */
 
+@media (max-width: 1024px) {
+  .work-slide-col iframe {
+    width: 458px;
+    height: 300px;
+  }
+
+  .lettuce-help-img {
+    width: 300px;
+    height: auto;
+  }
+}
+
 @media (max-width: 850px) {
   .flex-container {
     -webkit-box-orient: vertical;
@@ -420,7 +446,7 @@ footer {
 .resume-img {
   border-radius: 50%;
   height: 350px;
-  width: 350px;
+  min-width: 350px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   margin-right: 10px;
 }
@@ -445,12 +471,8 @@ footer {
 .ed-box,
 .skills-box {
   justify-content: left;
-  padding: 40px;
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 30px;
   min-width: 400px;
+  padding: 40px;
 }
 
 /* Work */
@@ -501,4 +523,45 @@ footer {
 
 .work-page-active {
   display: block;
+}
+
+.work-slide-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.work-slide-col iframe {
+  padding: 25px 0;
+}
+
+.contact-page {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.contact-text {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 20px;
+}
+
+.contact-text a {
+  text-decoration: none;
+  color: #3a3c4a;
+}
+
+.contact-text h3 {
+  padding-right: 20px;
 }
