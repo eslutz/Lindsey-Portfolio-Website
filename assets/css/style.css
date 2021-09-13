@@ -87,8 +87,12 @@ p {
 }
 
 .flex-container-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: row;
   flex-flow: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -391,6 +395,8 @@ footer {
 
 /* Teaching */
 .content-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -399,6 +405,8 @@ footer {
 }
 
 .teaching p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Mali", cursive;
   font-weight: bold;
@@ -409,7 +417,11 @@ footer {
 }
 
 .teaching-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 70px 20px 30px 20px;
 }
@@ -447,6 +459,7 @@ footer {
   border-radius: 50%;
   height: 350px;
   min-width: 350px;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   margin-right: 10px;
 }
@@ -470,6 +483,8 @@ footer {
 
 .ed-box,
 .skills-box {
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
   justify-content: left;
   min-width: 400px;
   padding: 40px;
@@ -479,6 +494,7 @@ footer {
 .work-page {
   padding-top: 70px;
   padding-bottom: 30px;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
 
