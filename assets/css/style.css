@@ -62,6 +62,7 @@ p {
 /* FLEXBOX */
 
 .flex-container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +76,6 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 1280px;
   margin: 0 auto;
   padding: 0 25px;
 }
@@ -87,6 +87,7 @@ p {
 }
 
 .flex-container-images {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,7 +103,6 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 1920px;
   margin: auto 0;
 }
 
@@ -486,8 +486,9 @@ footer {
   -webkit-box-pack: left;
   -ms-flex-pack: left;
   justify-content: left;
-  min-width: 400px;
-  padding: 40px;
+  min-width: 350px;
+  padding-left: 80px;
+  padding-bottom: 80px;
 }
 
 /* Work */
@@ -554,6 +555,7 @@ footer {
   align-items: center;
   margin: 0 auto;
   padding: 0 25px;
+  max-width: 1600px;
 }
 
 .work-slide-col iframe {
